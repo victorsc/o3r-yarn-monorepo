@@ -2,29 +2,34 @@
   "name": "my-yarn-monorepo",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "ng": "ng"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^17.3.0",
-    "@angular/common": "^17.3.0",
-    "@angular/compiler": "^17.3.0",
-    "@angular/core": "^17.3.0",
-    "@angular/forms": "^17.3.0",
-    "@angular/platform-browser": "^17.3.0",
-    "@angular/platform-browser-dynamic": "^17.3.0",
-    "@angular/router": "^17.3.0",
+    "@ama-sdk/core": "~10.4.2",
+    "@ama-sdk/schematics": "~10.4.2",
+    "@angular/animations": "~17.3.0",
+    "@angular/common": "~17.3.0",
+    "@angular/compiler": "~17.3.0",
+    "@angular/core": "~17.3.0",
+    "@angular/forms": "~17.3.0",
+    "@angular/platform-browser": "~17.3.0",
+    "@angular/platform-browser-dynamic": "~17.3.0",
+    "@angular/router": "~17.3.0",
+    "@o3r/core": "~10.4.2",
+    "@o3r/workspace": "~10.4.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular/cli": "^17.3.8",
-    "@angular/compiler-cli": "^17.3.0",
+    "@angular-devkit/architect": "~0.1703.0",
+    "@angular-devkit/core": "~17.3.0",
+    "@angular-devkit/schematics": "~17.3.0",
+    "@angular/cli": "~17.3.8",
+    "@angular/compiler-cli": "~17.3.0",
+    "@o3r/schematics": "^10.4.2",
+    "@schematics/angular": "~17.3.0",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -33,5 +38,13 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
-  }
+  },
+  "packageManager": "yarn@4.3.1",
+  "config": {
+    "o3rMetrics": false
+  },
+  "workspaces": [
+    "libs/*",
+    "apps/*"
+  ]
 }
